@@ -1,0 +1,23 @@
+version: "2"
+services:
+  db:
+    image: mariadb:10.1
+    environment:
+      - MYSQL_DATABASE=pdns
+      - MYSQL_USER=pdns
+      - MYSQL_PASSWORD=passwd
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+  pdns:
+    build: .
+    environment:
+      - GMYSQL_DBNAME=pdns
+      - GMYSQL_HOST=db
+      - GMYSQL_USER=pdns
+      - GMYSQL_PASSWORD=passwd
+      - WEBSERVER=yes
+    links:
+      - db
+    ports:
+      - "53:53"
+      - "53:53/udp"
+      - "8081"
