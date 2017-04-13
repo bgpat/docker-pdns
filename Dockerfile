@@ -9,6 +9,6 @@ RUN apk add --update --no-cache git g++ autoconf automake libtool boost-dev make
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 ADD config.py /config.py
 
-ENV DISABLE_SYSLOG=yes GUARDIAN=yes LAUNCH=gmysql WEBSERVER_ADDRESS=0.0.0.0
+ENV API_LOGFILE= DISABLE_SYSLOG=yes GUARDIAN=yes LAUNCH=gmysql WEBSERVER_ADDRESS=0.0.0.0
 
 CMD ["/docker-entrypoint.sh"]

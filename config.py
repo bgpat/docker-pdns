@@ -15,6 +15,7 @@ default_config = (
     'api',
     'api-key',
     'api-readonly',
+    'api-logfile',
     'cache-ttl',
     'carbon-interval',
     'carbon-ourname',
