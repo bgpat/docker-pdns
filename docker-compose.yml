@@ -1,7 +1,7 @@
 version: "3"
 services:
   db:
-    image: mariadb:11.5
+    image: mariadb:11.6
     environment:
       - MYSQL_DATABASE=pdns
       - MYSQL_USER=pdns
