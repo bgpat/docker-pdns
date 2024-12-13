@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.21
 
 RUN apk add --update --no-cache git g++ autoconf automake libtool boost-dev make bison flex file ragel mariadb-dev mariadb-client openssl && \
 	wget https://github.com/PowerDNS/pdns/archive/auth-4.0.3.tar.gz && \
